@@ -1,0 +1,19 @@
+[package]
+name = "object_store_sample"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+name = "object_store_sample"
+
+
+[dependencies]
+arrow2 = {version="0.14.2", features=["parquet2", "io_parquet", "io_parquet_compression"]}
+async-trait = "0.1.59"
+aws-creds = "0.34.0"
+object_store = {path="../arrow-rs/object_store", features=["aws", "gcp"], version="0.5.3"}
+futures = "0.3.25"
+range-reader = "0.2.0"
+tokio = {version="1.22.0", features=["full", "tracing"]}
+tracing = "0.1"
+tracing-subscriber = "0.3"
